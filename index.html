@@ -33,13 +33,14 @@
 
 <body class="  bg-[#F5FFF6]">
 
-<header class="p-2 mx-auto sm:flex justify-around   md:py-4 mx-auto container flex-row md:justify-between items-center">
-<div class=" flex justify-center items-center">
+<header class="bg-white" >
+    <div class="p-2 mx-auto sm:flex justify-around   md:py-4 container flex-row md:justify-between items-center">
+     <div class=" flex justify-center items-center">
         <img class="w-14  " src="./assets/logo.png" alt="">
         <h1 class=" px-2 font-extrabold text-2xl">Emergency <br>Service</h1>
-</div>
+     </div>
 
-<div class="  h-[52px] flex gap-6 md:items-center md:justify-around ">
+  <div class="  h-[52px] flex gap-6 md:items-center md:justify-around ">
         <div  class="gap-1 h-full w-[123px] rounded-3xl  flex justify-center items-center ">
              <p class=" font-bold" ><span id="heart-balance">0</span></p>
              <img class="font-bold w-[30px]" src="./assets/heart.png" alt="">
@@ -58,17 +59,18 @@
         </div>
 
  
+   </div>
 </div>
 </header>
 
 
 
-<main class=" container mx-auto">
+<main class="container mx-auto">
     <div style=" background: radial-gradient(circle, rgba(0, 103, 71, 1) 0%, rgba(1, 56, 30, 1) 80%);"" class=" bg-[#006747] hero-area">
         <div class="py-5 gap-2 flex flex-col justify-center items-center hero-container">
          <div class="bg-white rounded-full"><img  class=" w-14" src="./assets/logo.png" alt=""></div>
-        <h2 class="text-white font-bold text-[40px]">Emergency Service Directory</h2>
-        <p class="font-semibold text-xl text-white">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+        <h2 class="text-2xl text-white font-bold  md:text-[40px]">Emergency Service Directory</h2>
+        <p class="text-sm text-center font-semibold md:text-xl text-white">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
     </div>
    </div>
 
@@ -76,11 +78,11 @@
 
 <!---------- box area code  -------------->
 
-  <section class="gap-10 p-5  container mx-auto grid grid-cols-12">
-    <div class=" col-span-9 cart-box">
-        <div class="grid grid-cols-3 gap-8">
+  <section class="gap-10 p-5  container mx-auto grid md:grid-cols-12">
+    <div class=" md:col-span-9 cart-box">
+        <div class="grid md:grid-cols-3 gap-8">
 
-            <div class=" rounded-xl items-box   max-h-[360px] shadow-xl bg-white shadow-neutral-200 p-5 container-box">
+            <div class=" rounded-xl items-box   md:max-h-[360px] shadow-xl bg-white shadow-neutral-200 p-5 container-box">
                 <div class="flex justify-between items-center container-box-icon">
                     <div class="bg-[#FFE3E2] rounded-xl p-4"><img class="w-[32px]" src="./assets/emergency.png" alt=""></div>
                     <p class="items-button"><i class=" heart-btn fa-solid fa-heart"></i></p>
@@ -339,10 +341,10 @@
 
         </div>
     </div>
-    <div class="bg-white shadow-md col-span-3 history">
+    <div class=" bg-white shadow-md md:col-span-3 history">
         <div>
-            <div class="mt-5 px-5 call-history flex justify-between items-center">
-                <h1 class="font-bold text-xl">Call History</h1>
+            <div class="mt-5 p-5 md:px-5 call-history flex justify-between items-center">
+                <h1 class="font-bold text-xl"><i class="fa-regular fa-clock"></i>  Call History</h1>
                 <button  class="clear-button p-6 rounded-3xl bg-green-700 text-white btn btn-activbtn-primary">Clear</button>
             </div>
         </div>
