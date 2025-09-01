@@ -38,14 +38,21 @@ const perCallCharge=20
 
 
 let callBtn=document.getElementsByClassName("call-btn")
-const detailsCallAlert=document.getElementById("details-call-alert").innerText
-const numForCallAlert=document.getElementById("num-for-call-alert").innerText
+// const detailsCallAlert=document.getElementById("details-call-alert").innerText
+// const numForCallAlert=document.getElementById("num-for-call-alert").innerText
+
+
 
 
 for( let button of callBtn){
     button.addEventListener("click",function(){
+
+         const serviceHistory=button.parentNode.parentNode.children[1].children[1].innerText;
+         const emergencyNumber=button.parentNode.parentNode.children[1].children[2].innerText;
          
-          alert("Calling " + " "  + detailsCallAlert + " "  + numForCallAlert);
+         
+
+         alert("Calling " + " "  + serviceHistory + " "  + emergencyNumber);
 
         let currentBalance= getInnerText("call-balance")
         if(currentBalance >=perCallCharge){
@@ -67,10 +74,15 @@ for( let button of callBtn){
 
 
 
-
-
+const data={
+    date:new Date().toLocaleTimeString()
+}
+    
 
 const callHistoryContainer=document.querySelector(".call-history-container")
+
+
+
 const newCartCreat=document.createElement("div");
 const clearBtn=document.querySelector(".clear-button").addEventListener("click",function(){
    callHistoryContainer.innerHTML= " "; 
@@ -78,13 +90,13 @@ const clearBtn=document.querySelector(".clear-button").addEventListener("click",
 
  
  newCartCreat.innerHTML=`
-             <div class=" bg-slate-100 rounded-md items-center px-6 m-5 flex justify-between" >
+             <div class=" bg-slate-100 rounded-md items-center px-6 py-3 m-5 flex justify-between" >
                 <div>
-                    <h1 class="font-bold">Fire Service Number </h1>
-                    <h2>999</h2>
+                    <h1 class="font-bold">${serviceHistory} </h1>
+                    <h2 class="text-[#5C5C5C] text-sm ">${emergencyNumber}</h2>
                 </div>
                 <div>
-                    <p>11:36:58</p>
+                    <p class="text-[#5C5C5C] text-sm " >${data.date}</p>
                 </div>
 
             </div>
@@ -127,11 +139,14 @@ return btn
 // javascript code for copy past button 
 let copyBtn=document.getElementsByClassName("copy-btn")
 for(let button of copyBtn){
-button.addEventListener("click",function copyTheText() {
+      
+      button.addEventListener("click",function copyTheText(e) {
+
+     const copyButton= button.parentNode.parentNode.children[1].children[2].innerText
       let currentcopybalance=document.getElementById("copy-balance").innerText
       currentcopybalance++;
       setInnerTextforCopyBtn(currentcopybalance)
-      let textFromcopyItems =document.querySelector(".copy-items").innerText
+      let textFromcopyItems =copyButton
       navigator.clipboard.writeText(textFromcopyItems).then(() => {
         alert("Number copied to clipboard - "+ textFromcopyItems);
       }).catch(() => {
