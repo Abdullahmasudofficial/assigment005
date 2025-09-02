@@ -44,6 +44,7 @@ let callBtn=document.getElementsByClassName("call-btn")
 
 
 
+
 for( let button of callBtn){
     button.addEventListener("click",function(){
 
@@ -55,7 +56,7 @@ for( let button of callBtn){
          alert("Calling " + " "  + serviceHistory + " "  + emergencyNumber);
 
         let currentBalance= getInnerText("call-balance")
-        if(currentBalance >=perCallCharge){
+        if(currentBalance >= perCallCharge){
           currentBalance -= perCallCharge;
           setInnerText(currentBalance)
          
@@ -66,10 +67,8 @@ for( let button of callBtn){
         }
 
 
-
-
         else{
-            alert("Insufficient balance! At least 20 coins are required to make a call.");
+            alert("Insufficient Balance! At least 20 coins are required to make a call.");
         }
 
 
