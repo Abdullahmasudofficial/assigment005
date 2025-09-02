@@ -30,7 +30,7 @@ we used this for best performence or daynamic elements
 5. What is the difference between **preventDefault() and stopPropagation()** methods?
 
 **preventDefault()**=it's stop the default action without stoping the bubbling .
----
+
 **stopPropagation()**=it's stop bubbling  without stopping the default action__
 
 
